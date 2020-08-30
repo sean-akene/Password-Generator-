@@ -16,7 +16,6 @@ function returnPassword() {
   passwordText.value = password;
   passwordText.append(password);
 
-
 }
 //Generate Password Characteristics
 
@@ -29,7 +28,7 @@ function returnPassword() {
 
   passDiv.value = passGet;
   passDiv.append(passGet);
-  
+
   return passGet;
 }
 
@@ -65,14 +64,14 @@ function getPassCharacters() {
 
 function setCharacters(passElements) {
   var passArray = ["AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz", "0123456789",
-"!?$.,#+=&*_-@%?/^"];
+    "!?$.,#+=&*_-@%?/^"];
   var charactersSelected = "";
   for (var i = 0; i < passElements.length; i++) {
-    if (passElements[i]){
+    if (passElements[i]) {
       charactersSelected = charactersSelected + passArray[i];
     }
   }
-  
+
   return charactersSelected;
 }
 
@@ -86,13 +85,13 @@ function genRandomChar(charactersSelected) {
 
 function generatePassword(passElements, passLength) {
   var charactersSelected = setCharacters(passElements);
-  var password  = "";
+  var password = "";
 
-for (var i = 0; i < passLength; i++) {
-  password = password + genRandomChar(charactersSelected);
-  console.log(password);
-}
-return password; 
+  for (var i = 0; i < passLength; i++) {
+    password = password + genRandomChar(charactersSelected);
+    console.log(password);
+  }
+  return password;
 }
 
 
