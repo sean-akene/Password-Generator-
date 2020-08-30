@@ -9,7 +9,7 @@ generateBtn.addEventListener("click", returnPassword);
 
 
 // Write password to the #password input
-function writePassword() {
+function returnPassword() {
   var password = returnPassword();
   var passwordText = document.querySelector("#password");
 
@@ -25,6 +25,11 @@ function returnPassword() {
   var passParameter = getPassCharacters();
   var passGet = generatePassword(passParameter, passLength);
 
+  var passDiv = document.querySelector("#password");
+
+  passDiv.value = passGet;
+  passDiv.append(passGet);
+  
   return passGet;
 }
 
